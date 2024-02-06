@@ -1,0 +1,6 @@
+Utilisateur (ID_Utilisateur [PK], Nom, Prenom, Email, MotDePasse, Type)
+Session (ID_Session [PK], Nom_Unique, Date_Debut, Date_Fin)
+Cours (ID_Cours [PK], Nom_Cours, ID_Session [FK])
+Utilisateur_Session (ID_Utilisateur [FK], ID_Session [FK])  # Table de liaison pour gérer la relation entre Utilisateur et Session
+Evaluation (ID_Evaluation [PK], Type_Evaluation, ID_Formateur [FK], ID_Session [FK])
+Note (ID_Note [PK], Note, ID_Evaluation [FK], ID_Utilisateur [FK])
